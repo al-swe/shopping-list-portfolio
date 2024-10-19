@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping List</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anek+Gujarati:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form class="wrapper">
+      <h1>Shopping List</h1>
+      <div class="input-group">
+        <input type="text" id="item" placeholder="Add item" required />
+        <input
+          type="number"
+          id="amount"
+          min="1"
+          value="1"
+          step="1"
+          oninput="this.value = this.value.replace(/[^0-9]/g, '')"
+          required
+        />
+        <button id="add-button">Add</button>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead id="table-head">
+            <tr>
+              <th>Item</th>
+              <th>Amount</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </form>
+  </body>
+  <script src="app.js"></script>
+</html>
